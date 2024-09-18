@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-9"><div id="carouselExampleInterval" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="http://www.ith.mx/imagenes/slider%20DERECHOS%20SEX%20INFO%201%202023.jpg" class=" img-fluid " alt="...">
+         <!-- <p>
+            first
+         </p> -->
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <!-- <p>second</p> -->
+        <img src="http://www.ith.mx/imagenes/SLIDER%20CARTILLA%20DERECHOS%20SEXUALES.jpg" class=" img-fluid " alt="...">
+      </div>
+      <div class="carousel-item">
+        <!-- <p>third</p> -->
+        <img src="http://www.ith.mx/imagenes/Cero%20tolerancia%20_Slider.jpg" class=" img-fluid" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div></div>
+  <div class="col-3">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3486.218145175726!2d-111.00026458934667!3d29.099240475310584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ce85000299babd%3A0xeba16c2146892e9a!2sIth!5e0!3m2!1ses!2smx!4v1725122809916!5m2!1ses!2smx" width="350" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="row">
+      <div class="col">Redes TecNM/ITH</div>
+      <div class="col"><i class="fa-brands fa-youtube"></i></div>
+      <div class="col"><i class="fa-brands fa-facebook"></i></div>
+      <div class="col"><i class="fa-brands fa-instagram"></i></div>
+      <div class="col"><i class="fa-brands fa-x-twitter"></i></div>
+    </div>
+  </div>
+ 
+</div>
+<div class="row" *ngFor="let item of cliente">
+  <div class="col">{{item.Titulo}}</div>
+  <div class="col">administrativa</div>
+  <div class="col">deportes</div>
+  <div class="col">est</div>
+  <div class="col"> <button routerLink="/New/{{item.id}}" (click)="onSubmit(item.id)">id</button> </div>
+</div>

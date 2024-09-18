@@ -1,0 +1,22 @@
+<form [formGroup]="newsForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="title">Título:</label>
+      <input id="title" formControlName="title" type="text">
+    </div>
+    <div>
+      <label for="description">Descripción:</label>
+      <textarea id="description" formControlName="description"></textarea>
+    </div>
+    <div>
+      <label for="images">Selecciona imágenes:</label>
+      <input id="images" type="file" (change)="onFilesSelected($event)" multiple>
+    </div>
+    <div>
+      <label for="profileImage">Selecciona la imagen de perfil:</label>
+      <select id="profileImage" formControlName="profileImageIndex">
+        <option *ngFor="let file of files; let i = index" [value]="i">{{file.name}}</option>
+      </select>
+    </div>
+    <button type="submit">Subir Noticia</button>
+  </form>
+  
